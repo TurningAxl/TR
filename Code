@@ -1,0 +1,34 @@
+int Led1 = 13;
+int Led2 = 12;
+int Tilt1 = 3;
+int Tilt2 = 2;
+int Estado1;
+int Estado2;
+void setup ()
+{
+pinMode (Led1, OUTPUT);
+pinMode (Led2, OUTPUT);
+pinMode (Tilt2, INPUT);
+pinMode (Tilt1, INPUT);
+Serial.begin (9600);
+}
+void loop ()
+{
+Estado2 = digitalRead (Tilt2);
+Estado1 = digitalRead (Tilt1);
+if (Estadol == LOW) {
+digitalWrite(Led1, HIGH);
+delay (500);
+digitalWrite (Led1, LOW);
+delay (500);
+}
+else if (Estado2 == LOW) {
+digitalWrite (Led2, HIGH);
+delay (500);
+digitalWrite (Led2, LOW);
+delay (500);
+}
+else{
+digitalWrite(Led1, LOW);
+digitalWrite (Led2, LOW);
+}
